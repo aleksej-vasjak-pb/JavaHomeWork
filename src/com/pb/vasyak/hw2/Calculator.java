@@ -5,14 +5,25 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         System.out.println( "Введите первое целое число:" );
-        Scanner scan1 = new Scanner(System.in);
-        int operand1 = scan1.nextInt();
+        Scanner scan = new Scanner(System.in);
+        int operand1 = scan.nextInt();
         System.out.println( "Введите второе целое число:" );
-        Scanner scan2 = new Scanner(System.in);
-        int operand2 = scan2.nextInt();
+        int operand2 = scan.nextInt();
         System.out.println( "Введите знак арифметической операции: '+' '-' '*' '/'" );
-        Scanner scan3 = new Scanner(System.in);
-        int sign = scan3.nextInt();
-
+        String sign = scan.next();
+        switch (sign){
+            case "+": System.out.println(operand1 + operand2);
+                break;
+            case "-": System.out.println(operand1 - operand2);
+                break;
+            case "*": System.out.println(operand1 * operand2);
+                break;
+            case "/":
+                if (operand2 !=0)
+                    System.out.println(operand1 / operand2);
+                else
+                    System.out.println("Деление на '0' запрещенно!");
+        }
     }
 }
+
