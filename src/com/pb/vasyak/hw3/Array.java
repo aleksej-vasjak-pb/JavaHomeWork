@@ -1,6 +1,7 @@
 package com.pb.vasyak.hw3;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Array {
     public static void main(String[] args) {
@@ -33,17 +34,23 @@ public class Array {
         System.out.println("Количество положительных элементов  =  " + num);
 
         boolean isSorted = false;
-        while (!isSorted) {
+        int buf;
+        while(!isSorted) {
             isSorted = true;
-            for (int i = 1; i < mas.length; i++) {
-                if (mas[i] < mas[i - 1]); {
-                    int temp = mas[i];
-                    mas[i] = mas[i - 1];
-                    mas[i - 1] = temp;
+            for (int i = 0; i < mas.length-1; i++) {
+                if(mas[i] > mas[i+1]){
                     isSorted = false;
+
+                    buf = mas[i];
+                    mas[i] = mas[i+1];
+                    mas[i+1] = buf;
                 }
-//                System.out.println(mas[i]);
             }
         }
+        System.out.println("Ваш отсортированный массив:  " );
+        System.out.println(Arrays.toString(mas));
     }
 }
+
+
+
