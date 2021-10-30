@@ -18,7 +18,7 @@ public class Anagram {
     }
     //Создаем метод для упорядочивания элементов массивов по алфавиту и сравнения их элементов
     private static String checkArrays(String firstText, String secondText) {
-        String Message = " ";
+        String Message = "";
         char[] firstTextChars = firstText.toCharArray();
         char[] secondTextChars = secondText.toCharArray();
         Arrays.sort(firstTextChars);
@@ -33,7 +33,7 @@ public class Anagram {
     }
     //Создаем метод для сравнения строк на признак анаграмности
     private static void Anagrams(String firstText, String secondText){
-        String Message = " ";
+        String Message = "";
         if (firstText.equals(secondText)){
             Message = Message+"Введены одинаковые строки!";
         }
