@@ -4,7 +4,6 @@ public class Animal {
 
     private String food;
     private String location;
-//    private String pet;
 
     public Animal(String food, String location) {
         this.food = food;

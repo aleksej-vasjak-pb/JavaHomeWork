@@ -1,5 +1,7 @@
 package com.pb.vasyak.hw6;
 
+import java.util.Objects;
+
 public class Cat extends Animal {
 
     private String wool;
@@ -49,6 +51,6 @@ public class Cat extends Animal {
 
     @Override
     public int hashCode() {
-        return Object.hash(wool);
+        return Objects.hash(wool);
     }
 }

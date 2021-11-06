@@ -1,5 +1,7 @@
 package com.pb.vasyak.hw6;
 
+import java.util.Objects;
+
 public class Dog extends Animal {
 
     private String tail;
@@ -42,11 +44,11 @@ public class Dog extends Animal {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Dog dog = (Dog) obj;
-        return Object.equals(tail, dog.tail);
+        return Objects.equals(tail, dog.tail);
     }
 
     @Override
     public int hashCode(){
-        return Object.hash(tail);
+        return Objects.hash(tail);
     }
 }

@@ -20,4 +20,7 @@ public class VetClinic {
 
 
     }
+
+    private static void treatAnimal(Animal a) {
+    }
 }

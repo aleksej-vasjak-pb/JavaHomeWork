@@ -1,23 +1,21 @@
 package com.pb.vasyak.hw6;
 
-import java.util.Objects;
-import static java.lang.Object.*;
 import static java.util.Objects.hash;
 
 public class Horse extends Animal {
 
-    private String height;
+    private int height;
 
-    public Horse(String height){
+    public Horse(int height){
         super("траву", "конюшня");
         this.height = height;
     }
 
-    public String getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(String tail) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
